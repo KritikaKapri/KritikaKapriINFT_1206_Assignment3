@@ -37,9 +37,6 @@ class Ball {
 
     }
 
-
-
-    
     update() {
   if ((this.x + this.size) >= width) {
     this.velX = -(this.velX);
