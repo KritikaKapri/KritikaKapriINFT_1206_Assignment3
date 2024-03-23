@@ -12,9 +12,17 @@ const altText =['A beautiful Lanscapee','A beautiful Lanscapee','A beautiful Lan
 
 /* Looping through images */
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
+for (let i = 0; i <imageArray.length; i++) {
+    const newImage = document.createElement('img'); 
+    newImage.setAttribute('src', 'images/' + imageArray[i]);
+    newImage.setAttribute('alt', altText [i]);
+    thumbBar.appendChild(newImage); 
+ 
+     newImage.addEventListener('click', (e) => {
+         displayedImage.src = e.target.src;
+     }
+     ); 
+ 
+ }
 
 /* Wiring up the Darken/Lighten button */
